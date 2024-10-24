@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(1)->create();
+        User::factory(1)->create();
 
         // User::factory()->create([
         //     'name' => 'Test User',
@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // Category::factory(2)->create();
-        $this->call([
+        $this->call(
             CategorySeeder::class,
-        ]);
+        );
     }
 }
